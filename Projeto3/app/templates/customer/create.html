@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+  <h1>Create Customer</h1>
+  <form method="post">
+    <label for="cust_no">Customer Number</label>
+    <input name="cust_no" id="cust_no" type="number" value="{{ cust_no_to_use }}" required>
+    <br>
+    <label for="email">E-mail</label>
+    <input name="email" id="email" type="text" required>
+    <br>
+    <label for="name">Name</label>
+    <input name="name" id="name" type="text" required>
+    <br>
+    <label for="phone">Phone</label>
+    <input name="phone" id="phone" type="number" required>
+    <br>
+    <label for="address">Address</label>
+    <textarea name="address" id="address" required></textarea>
+    <br>
+    <input type="submit" value="Create">
+  </form>
+</div>
+{% endblock %}

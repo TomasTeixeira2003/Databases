@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="container">
+    <h1>New Order</h1>
+    <form method="post">
+        <label for="order_no">Order Number</label>
+        <input name="order_no" id="order_no" type="number" value="{{ order_no_to_use }}" required>
+        <br>
+        <label for="cust_no">Customer Name</label>
+        <select name="cust_no" id="cust_no" required>
+          {% for customer in customers %}
+              <option value="{{ customer.cust_no }}">{{ customer.name }}</option>
+          {% endfor %}
+      </select>
+        <br>
+        <label for="sku">Product</label>
+        <select name="sku" id="sku" required>
+            {% for product in products %}
+                <option value="{{ product.sku }}">{{ product.name }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <label for="qty">Quantity</label>
+        <input name="qty" id="qty" type="number" min="0" step="1" required>
+        <br>
+        <label for="date">Date</label>
+        <input name="date" id="date" type="date" required>
+        <input type="submit" value="Create">
+        {% block scripts %}
+          <script>
+            document.addEventListener("DOMContentLoaded", function() {
+              const dateInput = document.getElementById("date");
+              const currentDate = new Date();
+              const formattedDate = currentDate.toISOString().substring(0, 10);
+              dateInput.value = formattedDate;
+            });
+          </script>
+        {% endblock %}
+    </form>
+  </div>
+{% endblock %}
+

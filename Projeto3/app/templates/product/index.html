@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block header %}
+
+  <h1>{% block title %}Products{% endblock %}</h1>
+  <a class="create-btn" href="{{ url_for('product_create') }}">Create new</a>
+  
+{% endblock %}
+
+{% block content %}
+<div class="container-index">
+  {% for product in products %}
+    <article class="post">
+      <div class="post-content">
+      <header>
+        <div>
+          <h1>{{ product['name'] }}</h1>
+          <div class="about">{{ product['description'] }}</div>
+          <div>
+            <p class="body">{{ product['price'] }} €</p>
+          </div>
+        </div>
+        
+      </header>
+    </div>
+    <div class="edit">
+      <a class="edit action" href="{{ url_for('product_update', sku=product['sku']) }}">Edit</a>
+    </div>
+    <form action="{{ url_for('product_delete', sku=product['sku']) }}" method="post">
+      <input class="danger" type="submit" value="Delete" onclick="return confirm('Are you sure?');">
+    </form> 
+    </article>
+    {% if not loop.last %}
+      <hr>
+    {% endif %}
+  {% endfor %}
+</div>
+{% endblock %}

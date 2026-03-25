@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<div class="container">
+  <h1>{% block title %}Paying Order{% endblock %}</h1>
+  <label for="order_no">Order Number</label>
+  <input name="order_no" id="order_no" type="text" value="{{ order['order_no'] }}" disabled>
+  <label for="cust_no">Customer Number</label>
+  <input name="cust_no" id="cust_no" type="text" value="{{ order['cust_no'] }}" disabled>
+  <label for="price">Price</label>
+  <input name="price" id="price" type="number" value="{{ order['order_price'] }}" disabled>
+  <label for="employee">Employee</label>
+  <input name="employee" id="employee" type="number" value="012345678" disabled>
+  <div class="button-container">
+    <form method="post" style="display: inline-block;">
+      <input type="submit" value="Pay" class="save-btn">
+    </form>
+  </div>
+</div>
+{% endblock %}

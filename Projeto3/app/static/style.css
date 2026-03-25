@@ -1,0 +1,292 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+.create-btn {
+  display: inline-block;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  text-decoration: none;
+  margin-bottom: 1%;
+}
+
+.create-btn:hover {
+  background-color: #0056b3;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.container label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.container input[type="text"],
+.container textarea {
+  width: 100%;
+  font-size: 16px;
+  padding: 5px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.container textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.container input[type="number"],
+.container input[type="date"] {
+  width: 100%;
+  font-size: 16px;
+  padding: 5px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  outline: none;
+}
+
+.container select {
+  width: 100%;
+  font-size: 16px;
+  padding: 5px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  outline: none;
+}
+
+.container input[type="submit"] {
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.container input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.container-index article.post {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.container-index .post-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container-index .info {
+  margin-top: 10px;
+}
+
+.container-index article.post > header {
+  flex: 1;
+}
+
+.container-index article.post > form {
+  margin-left: 20px;
+}
+
+.container-index h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.container-index h2 {
+  font-size: 18px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.container-index .about {
+  color: #999;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.container-index p.body {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.container-index input[type="submit"].danger {
+  font-size: 14px;
+  background-color: #dc3545;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.container-index input[type="submit"].danger:hover {
+  background-color: #c82333;
+}
+
+.container-index hr {
+  border: none;
+  border-top: 1px solid #e5e5e5;
+}
+
+.edit p,
+.container-index .edit a {
+  font-size: 14px;
+  background-color: #ffc107;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.container-index .edit a:hover {
+  background-color: #e0a800;
+}
+
+.container-index .pay a {
+  font-size: 14px;
+  background-color: #28a745;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.container-index .pay a:hover {
+  background-color: #218838;
+}
+
+.container-update {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container-update h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.container-update label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.container-update input[type="text"],
+.container-update textarea {
+  width: 100%;
+  font-size: 16px;
+  padding: 5px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.container-update textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.container-update input[type="number"],
+.container-update input[type="date"] {
+  width: 100%;
+  font-size: 16px;
+  padding: 5px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  outline: none;
+}
+
+.container-update select {
+  width: 100%;
+  font-size: 16px;
+  padding: 5px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  outline: none;
+}
+
+.container-update .button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container-update .save-btn {
+  font-size: 16px;
+  background-color: #28a745;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.container-update .save-btn:hover {
+  background-color: #218838;
+}
+
+.container-update .delete-btn {
+  font-size: 16px;
+  background-color: #dc3545; /* Updated background color */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.container-update .delete-btn:hover {
+  background-color: #c82333; /* Updated hover background color */
+}
+
+.container-update .main-form {
+  width: 100%;
+}

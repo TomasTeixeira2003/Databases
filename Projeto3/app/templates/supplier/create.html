@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+  <h1>Create Supplier</h1>
+  <form method="post">
+    <label for="tin">TIN</label>
+    <input name="tin" id="tin" type="number" required>
+    <br>
+    <label for="name">Name</label>
+    <input name="name" id="name" type="text" required>
+    <br>
+    <label for="address">Address</label>
+    <textarea name="address" id="address" required></textarea>
+    <br>
+    <label for="sku">Product</label>
+    <select name="sku" id="sku" required>
+        {% for product in products %}
+            <option value="{{ product.sku }}">{{ product.name }}</option>
+        {% endfor %}
+    </select>
+    <br>
+    <label for="date">Date</label>
+    <input name="date" id="date" type="date" required>
+    <input type="submit" value="Create">
+    {% block scripts %}
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          const dateInput = document.getElementById("date");
+          const currentDate = new Date();
+          const formattedDate = currentDate.toISOString().substring(0, 10);
+          dateInput.value = formattedDate;
+        });
+      </script>
+    {% endblock %}
+  </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block header %}
+
+  <h1>{% block title %}Orders{% endblock %}</h1>
+  <a class="create-btn" href="{{ url_for('order_create') }}">Create new</a>
+  
+{% endblock %}
+
+{% block content %}
+<div class="container-index">
+  {% for order in unpaid_orders %}
+    <article class="post">
+      <div class="post-content">
+      <header>
+        <div>
+          <h1>Order #{{ order['order_no'] }}</h1>
+          <div class="about">by customer with id {{ order['cust_no'] }}</div>
+          <div>
+            <p class="body">placed on {{ order['date'] }}</p>
+          </div>
+        </div>
+        
+      </header>
+    </div>
+    <div class="pay">
+      <a class="pay action" href="{{ url_for('order_pay', cust_no=order['cust_no'], employee='012345678', order_no=order['order_no']) }}">Pay</a>
+    </div> 
+    </article>
+    {% if not loop.last %}
+      <hr>
+    {% endif %}
+  {% endfor %}
+  {% for order in paid_orders %}
+    <article class="post">
+      <div class="post-content">
+      <header>
+        <div>
+          <h1>Order #{{ order['order_no'] }}</h1>
+          <div class="about">by customer with id {{ order['cust_no'] }}</div>
+          <div>
+            <p class="body">placed on {{ order['date'] }}</p>
+          </div>
+        </div>
+        
+      </header>
+    </div>
+    <div>
+      <p>Already paid</p>
+    </div> 
+    </article>
+    {% if not loop.last %}
+      <hr>
+    {% endif %}
+  {% endfor %}
+</div>
+{% endblock %}
