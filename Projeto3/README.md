@@ -2,7 +2,7 @@
 
 This is the third and final phase of the **Databases** (Bases de Dados) project for LEIC, Instituto Superior Técnico (2022/2023). This stage focuses on advanced database features, including procedural SQL (Triggers/Stored Procedures), web application prototyping, and OLAP (On-Line Analytical Processing).
 
-## 📌 Project Overview
+## Project Overview
 
 The final phase elevates the "Online Retail" database into a functional system with complex business logic, a Python-based web interface, and analytical capabilities for business intelligence.
 
